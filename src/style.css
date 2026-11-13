@@ -11,14 +11,15 @@ button { font: inherit; }
 .topbar h1 { margin: 0 0 5px; font-size: 23px; font-weight: 600; letter-spacing: -.04em; }.topbar p, .header-links, .project__eyebrow, .tag-list, .highlights, .contact-links, .footer > div > p { font-family: var(--mono); }.topbar p { margin: 0; color: var(--muted); font-size: 11px; }.header-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 18px; color: var(--muted); font-size: 10px; }.header-links a:hover, .contact-links a:hover { color: var(--blue); }
 .intro { padding: 100px 0 58px; border-bottom: 1px solid var(--line); }.intro h2 { margin: 0; font-size: clamp(32px, 5vw, 58px); letter-spacing: -.065em; font-weight: 500; }
 .projects { padding: 22px 0 110px; display: grid; gap: 20px; }.project { border: 1px solid var(--line); background: rgba(21,30,39,.72); display: grid; grid-template-columns: 1fr 1fr; min-height: 390px; }.project__visuals { padding: 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; background: #111a22; border-right: 1px solid var(--line); }.visual { min-height: 140px; border: 1px solid #2e4c67; color: var(--muted); padding: 12px; position: relative; display: flex; flex-direction: column; justify-content: end; overflow: hidden; background: linear-gradient(135deg, rgba(49,92,139,.28), rgba(17,26,34,.5)); font: 10px var(--mono); }.visual:before { content: ''; position: absolute; inset: 20px 14px 40px; border: 1px solid rgba(118,173,255,.4); background: repeating-linear-gradient(90deg, transparent 0 17px, rgba(102,228,212,.16) 18px 19px); }.visual--2:before { border-style: dashed; inset: 28px 14px 45px; }.visual--3:before { background: linear-gradient(115deg, transparent 48%, var(--cyan) 49%, transparent 50%), linear-gradient(25deg, transparent 48%, var(--blue) 49%, transparent 50%); inset: 20px; }.visual__index { position: absolute; top: 10px; color: var(--blue); }.project__body { padding: 30px; }.project__eyebrow { display: flex; gap: 12px; color: var(--dim); font-size: 10px; margin-bottom: 28px; text-transform: uppercase; }.project__eyebrow span:first-child { color: var(--blue); }.project h2 { font-size: clamp(24px, 3vw, 34px); line-height: 1.05; letter-spacing: -.05em; margin: 0 0 20px; font-weight: 500; }.project__description { max-width: 580px; color: var(--muted); font-size: 14px; line-height: 1.6; margin: 0 0 20px; }.tag-list { display: flex; flex-wrap: wrap; gap: 5px; }.tag-list span { padding: 6px 8px; border: 1px solid var(--line); color: var(--muted); font-size: 9px; }.highlights { border-top: 1px solid var(--line); margin-top: 25px; padding-top: 16px; color: var(--muted); font-size: 11px; line-height: 1.5; }.highlights strong { display: block; color: var(--ink); font-weight: 400; margin-bottom: 8px; }.highlights div { margin: 5px 0; }.highlights b { color: var(--cyan); margin-right: 8px; }
-.footer { border-top: 1px solid var(--line); min-height: 280px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; padding-top: 58px; padding-bottom: 70px; }.footer h2 { margin: 0 0 10px; font-size: 35px; letter-spacing: -.05em; font-weight: 500; }.footer > div > p { color: var(--muted); font-size: 11px; }.contact-links { display: flex; flex-direction: column; font-size: 12px; }.contact-links a, .contact-links button { border-bottom: 1px solid var(--line); padding: 13px 0; color: var(--muted); text-align: left; background: transparent; border-inline: 0; border-top: 0; cursor: pointer; }.contact-links button { color: var(--cyan); }.contact-links a:hover, .contact-links button:hover { color: var(--ink); }
-@media (max-width: 700px) { .section-wrap, .topbar { width: min(100% - 32px, 600px); }.topbar { min-height: 95px; align-items: flex-start; padding: 22px 0; }.header-links { max-width: 170px; gap: 7px 12px; }.topbar h1 { font-size: 19px; }.topbar p { font-size: 10px; }.intro { padding: 70px 0 40px; }.projects { padding-bottom: 75px; }.project { grid-template-columns: 1fr; }.project__visuals { min-height: 245px; border-right: 0; border-bottom: 1px solid var(--line); }.project__body { padding: 24px; }.footer { grid-template-columns: 1fr; gap: 35px; padding-top: 45px; padding-bottom: 55px; } }
+.footer { border-top: 1px solid var(--line); min-height: 280px; padding-top: 58px; padding-bottom: 70px; }.credential { max-width: 290px; }.footer h2 { margin: 0 0 10px; font-size: 35px; letter-spacing: -.05em; font-weight: 500; }.footer > div > p, .contact-row > div > p { color: var(--muted); font-size: 11px; }.contact-row { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; margin-top: 38px; }.contact-links { display: flex; flex-direction: column; font-size: 12px; }.contact-links a, .contact-links button { border-bottom: 1px solid var(--line); padding: 13px 0; color: var(--muted); text-align: left; background: transparent; border-inline: 0; border-top: 0; cursor: pointer; }.contact-links button { color: var(--cyan); }.contact-links a:hover, .contact-links button:hover { color: var(--ink); }
+@media (max-width: 700px) { .section-wrap, .topbar { width: min(100% - 32px, 600px); }.topbar { min-height: 95px; align-items: flex-start; padding: 22px 0; }.header-links { max-width: 170px; gap: 7px 12px; }.topbar h1 { font-size: 19px; }.topbar p { font-size: 10px; }.intro { padding: 70px 0 40px; }.projects { padding-bottom: 75px; }.project { grid-template-columns: 1fr; }.project__visuals { min-height: 245px; border-right: 0; border-bottom: 1px solid var(--line); }.project__body { padding: 24px; }.contact-row { grid-template-columns: 1fr; gap: 35px; }.footer { padding-top: 45px; padding-bottom: 55px; } }
 
 .visual--image { padding: 0; background: #0c1218; }
 .visual--image:before { display: none; }
 .visual--image img { width: 100%; height: 100%; min-height: 140px; object-fit: contain; display: block; opacity: .88; padding: 8px; background: #0c1218; }
 .visual--image > span:not(.visual__index) { position: absolute; inset: auto 0 0; padding: 28px 12px 12px; color: #fff; background: linear-gradient(transparent, rgba(8,13,18,.9)); }
 .visual__index { left: 12px; z-index: 1; }
+.credential { margin-top: 30px; max-width: 290px; scroll-margin-top: 140px; }.credential h2 { margin: 0 0 20px; font-size: 35px; letter-spacing: -.05em; font-weight: 500; }.credential-card { min-height: 180px; }
 .project-links { margin-top: 20px; }.documentation-link { display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid var(--line); color: var(--cyan); font: 10px var(--mono); }.documentation-link:last-child { border-bottom: 1px solid var(--line); }
 .documentation-link:hover { color: var(--ink); }
 .visual--image { cursor: zoom-in; }
@@ -30,3 +31,31 @@ button { font: inherit; }
 .image-modal__close { position: absolute; top: 18px; right: 24px; border: 0; background: transparent; color: var(--ink); font-size: 34px; line-height: 1; cursor: pointer; }
 .image-modal__close:hover { color: var(--cyan); }
 body.modal-open { overflow: hidden; }
+
+/* Interaction and layout safeguards for production use. */
+a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 4px; }
+.topbar { position: sticky; top: 0; z-index: 5; background: rgba(16, 22, 29, .94); backdrop-filter: blur(14px); }
+.topbar__actions { display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
+.site-nav { display: flex; gap: 22px; color: var(--blue); font: 10px var(--mono); }
+.site-nav a:hover { color: var(--ink); }
+.contact-row { margin-top: 110px; }
+.project { border-radius: 8px; overflow: hidden; transition: border-color .2s ease, box-shadow .2s ease; }
+.project:hover { border-color: #47627b; box-shadow: 0 18px 45px rgba(0, 0, 0, .18); }
+.project__visuals, .project__body { min-width: 0; }
+.project h2 { overflow-wrap: anywhere; }
+
+@media (max-width: 700px) {
+	.topbar__actions { align-items: flex-end; gap: 8px; }
+	.site-nav { gap: 14px; }
+}
+
+.contact-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; }
+.contact-links button { grid-column: 1 / -1; }
+.contact-row { display: block; }
+.contact-links { max-width: 720px; margin-top: 24px; }
+.contact-links a, .contact-links button { border-bottom: 0; }
+
+@media (max-width: 700px) {
+	.contact-links { grid-template-columns: 1fr; column-gap: 0; }
+	.contact-links button { grid-column: auto; }
+}

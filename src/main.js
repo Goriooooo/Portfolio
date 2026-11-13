@@ -1,4 +1,5 @@
 import './style.css'
+import ccnaCertificate from './assets/projects/ccna-certificate.jpeg'
 import pigaiCameraDimensions from './assets/projects/pigai-camera-dimensions.png'
 import pigaiMonitoring from './assets/projects/pigai-monitoring-alert-platform.png'
 import pigaiDetection from './assets/projects/pigai-yolo-detection-results.png'
@@ -67,7 +68,7 @@ const projectMarkup = projects.map((project) => `
       ${project.visuals.map((visual, index) => {
         const label = typeof visual === 'string' ? visual : visual.label
         const image = typeof visual === 'string' ? '' : `<img src="${visual.image}" alt="${label}" loading="lazy">`
-        return `<div class="visual visual--${index + 1} ${image ? 'visual--image' : ''}" ${image ? `role="button" tabindex="0" data-image="${visual.image}" data-label="${label}"` : ''}>${image}<span class="visual__index">0${index + 1}</span><span>${label}</span></div>`
+        return `<div class="visual visual--${index + 1} ${image ? 'visual--image' : ''}" ${image ? `role="button" tabindex="0" aria-label="Open ${label}" data-image="${visual.image}" data-label="${label}"` : ''}>${image}<span class="visual__index">0${index + 1}</span><span>${label}</span></div>`
       }).join('')}
     </div>
     <div class="project__body">
@@ -84,23 +85,23 @@ const projectMarkup = projects.map((project) => `
 document.querySelector('#app').innerHTML = `
   <header class="topbar" id="top">
     <div><h1>Gregg Reiven R. Babaylan</h1><p>BS Information Technology | Bukidnon State University</p></div>
-    <div class="header-links"><a href="https://github.com/Goriooooo" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/gregg-reiven-babaylan-0a465243b/" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:babaylangemini@gmail.com">babaylangemini@gmail.com</a><a href="tel:09360322143">09360322143</a></div>
+    <div class="topbar__actions"><nav class="site-nav" aria-label="Primary navigation"><a href="#projects">Projects</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a></nav><div class="header-links"><a href="https://github.com/Goriooooo" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/gregg-reiven-babaylan-0a465243b/" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:babaylangemini@gmail.com">babaylangemini@gmail.com</a><a href="tel:09360322143">09360322143</a></div></div>
   </header>
   <main>
     <section class="intro section-wrap"><h2>Projects</h2></section>
     <section class="projects section-wrap" id="projects">${projectMarkup}</section>
   </main>
   <footer class="footer section-wrap" id="contact">
-    <div><h2>Contact</h2><p>Gregg Reiven R. Babaylan</p></div>
-    <div class="contact-links">
+    <div class="credential" id="credentials"><h2>Credentials</h2><div class="credential-card visual visual--image" role="button" tabindex="0" data-image="${ccnaCertificate}" data-label="Cisco Certified Network Associate (CCNA)"><img src="${ccnaCertificate}" alt="Cisco Certified Network Associate certificate" loading="lazy"><span class="visual__index">01</span><span>Cisco Certified Network Associate (CCNA)</span></div></div>
+    <div class="contact-row"><div><h2>Contact</h2><p>Gregg Reiven R. Babaylan</p></div><div class="contact-links">
       <a href="mailto:babaylangemini@gmail.com">babaylangemini@gmail.com</a>
       <a href="tel:09360322143">09360322143</a>
       <a href="https://github.com/Goriooooo" target="_blank" rel="noreferrer">GitHub</a>
       <a href="https://www.linkedin.com/in/gregg-reiven-babaylan-0a465243b/" target="_blank" rel="noreferrer">LinkedIn</a>
       <button id="downloadResume" type="button">Download Resume</button>
-    </div>
+    </div></div>
   </footer>
-  <div class="image-modal" id="imageModal" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+  <div class="image-modal" id="imageModal" role="dialog" aria-modal="true" aria-labelledby="imageModalLabel" hidden>
     <button class="image-modal__close" id="closeImageModal" type="button" aria-label="Close image preview">&times;</button>
     <img id="imageModalPreview" src="" alt="">
     <p id="imageModalLabel"></p>
