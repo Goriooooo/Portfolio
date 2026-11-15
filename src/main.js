@@ -98,7 +98,7 @@ document.querySelector('#app').innerHTML = `
       <a href="tel:09360322143">09360322143</a>
       <a href="https://github.com/Goriooooo" target="_blank" rel="noreferrer">GitHub</a>
       <a href="https://www.linkedin.com/in/gregg-reiven-babaylan-0a465243b/" target="_blank" rel="noreferrer">LinkedIn</a>
-      <button id="downloadResume" type="button">Download Resume</button>
+      <a href="/docs/Babaylan_Resume.pdf" download>Download Resume</a>
     </div></div>
   </footer>
   <div class="image-modal" id="imageModal" role="dialog" aria-modal="true" aria-labelledby="imageModalLabel" hidden>
@@ -143,11 +143,3 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && !imageModal.hidden) closeImageModal()
 })
 
-document.querySelector('#downloadResume').addEventListener('click', () => {
-  const profile = 'Gregg Reiven R. Babaylan\nBS Information Technology | Bukidnon State University\n\nEmail: babaylangemini@gmail.com\nPhone: 09360322143\nGitHub: https://github.com/Goriooooo\nLinkedIn: https://www.linkedin.com/in/gregg-reiven-babaylan-0a465243b/'
-  const link = document.createElement('a')
-  link.href = URL.createObjectURL(new Blob([profile], { type: 'text/plain' }))
-  link.download = 'Gregg-Babaylan-Resume-Profile.txt'
-  link.click()
-  URL.revokeObjectURL(link.href)
-})
